@@ -1,3 +1,12 @@
+Vue.component('counter', {
+  data: function() {
+    return {
+      count: 0
+    }
+  },
+  template: '<button v-on:click="count++">you click {{count}}</button>'
+})
+
 var myVue = new Vue({
   el: "#app",
   data: {
@@ -6,12 +15,14 @@ var myVue = new Vue({
    isDel: true,
    isDelBak: true,
    ten: 10,
-   result: 102,
+   result: 102c
    message: "hello world",
    status: true,
    vsParam: true,
    myGray: "#3F33FF",
    small: "5em",
+   myCheckBox: [],
+   myRadio: '',
    items: [
      {message: "a"},
      {message: "b"}
@@ -23,6 +34,9 @@ var myVue = new Vue({
     },
     click2: function() {
       console.log("click2");
+    },
+    doThat: function() {
+      console.log("ha");
     }
   }
   /*,mounted(){

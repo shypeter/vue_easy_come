@@ -35,6 +35,31 @@
     {{index}} : {{item.message}}
   </li>
   </ul>
-  
+
+
+  <div>
+    <input type="text" v-model="message" />
+    <br/>
+    <span>you input : {{message}}</span>
+    <br/>
+  </div>
+  <div>
+    a:<input type="checkbox" value="a" v-model="myCheckBox"><br/>
+    b:<input type="checkbox" value="b" v-model="myCheckBox"><br/>
+    <span>you check: {{myCheckBox}}</span>
+  </div>
+  <div>
+    boy:<input type="radio" value="boy" v-model="myRadio"><br/>
+    gril:<input type="radio" value="gril" v-model="myRadio"><br/>
+    <span>you check: {{myRadio}}</span>
+    <br/>
+  </div>
+  <div>
+    <a href="https://google.com.tw" @click.stop.prevent="doThat">gogogo</a>
+  </div>
+  <div>
+    <counter></counter>
+    <counter></counter>
+  </div>
 </div>
 <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
