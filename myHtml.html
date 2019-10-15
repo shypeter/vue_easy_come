@@ -1,0 +1,40 @@
+<div id="app">
+  <div>
+    ori:{{htmlCode}}
+  </div>
+  <div v-html="htmlCode"></div>
+  
+  <div :class="del">aabb</div>
+  <div :class="['del', 'delBak']">aabb</div>
+  <div :class="{del: isDel, delBak: isDelBak}">
+    ccdd
+  </div>
+  <div :style="{color: myGray, fontSize: small}">
+    eeff
+  </div>
+  <div>
+    {{ ten + 1 }}
+  </div>
+  <div>
+    {{ (result==10) ? "YES" : "NO"}}
+  </div>
+  <div @click="click2">
+    {{ message.split(" ").reverse().join(" ") }}
+  </div>
+  <div v-if="status">
+    lol
+  </div>
+  <div v-else>
+    wow
+  </div>
+  <div class="container" style="font-size:50px" v-show="vsParam" v-on:click="click1">
+    this is v-show1
+  </div>
+  <ul>
+  <li v-for="item, index in items" :key="index">
+    {{index}} : {{item.message}}
+  </li>
+  </ul>
+  
+</div>
+<script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
