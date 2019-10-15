@@ -15,7 +15,7 @@ var myVue = new Vue({
    isDel: true,
    isDelBak: true,
    ten: 10,
-   result: 102c
+   result: 10,
    message: "hello world",
    status: true,
    vsParam: true,
