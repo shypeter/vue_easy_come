@@ -58,8 +58,13 @@
     <a href="https://google.com.tw" @click.stop.prevent="doThat">gogogo</a>
   </div>
   <div>
-    <counter></counter>
-    <counter></counter>
+    <counter title="title1 :" @clickcounter="clickcounter">
+      <!--this for slot--><h1>aloha</h1>
+    </counter>
+    
+    <counter title="title2 :">
+      <!--this for slot--><h1>bloba</ha>
+    </counter>
   </div>
 </div>
 <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>

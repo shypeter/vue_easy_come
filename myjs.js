@@ -1,10 +1,17 @@
 Vue.component('counter', {
+  props: ['title'],
   data: function() {
     return {
       count: 0
     }
   },
-  template: '<button v-on:click="count++">you click {{count}}</button>'
+  template: '<div><slot></slot><button v-on:click="addCounter">{{title}} you click {{count}}</button></div>',
+  methods:{
+    addCounter: function() {
+      this.count++;
+      this.$emit('clickcounter', this.count);
+    }
+  }
 })
 
 var myVue = new Vue({
@@ -15,7 +22,7 @@ var myVue = new Vue({
    isDel: true,
    isDelBak: true,
    ten: 10,
-   result: 10,
+   result: 1,
    message: "hello world",
    status: true,
    vsParam: true,
@@ -37,6 +44,9 @@ var myVue = new Vue({
     },
     doThat: function() {
       console.log("ha");
+    },
+    clickcounter: function(number) {
+      console.log(number)
     }
   }
   /*,mounted(){
