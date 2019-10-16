@@ -1,11 +1,11 @@
-Vue.component('counter', {
+Vue.component('mycounter', {
   props: ['title'],
   data: function() {
     return {
       count: 0
     }
   },
-  template: '<div><slot></slot><button v-on:click="addCounter">{{title}} you click {{count}}</button></div>',
+  template: '<div><button v-on:click="addCounter">{{title}} you click {{count}}</button><slot></slot></div>',
   methods:{
     addCounter: function() {
       this.count++;
@@ -34,6 +34,20 @@ var myVue = new Vue({
      {message: "a"},
      {message: "b"}
    ]
+  },
+  components:{
+    scopcomponent: {
+      props:["title"],
+      data: function() {
+        return {scount: 0, name:"Peter"}
+      },
+      template: '<div><button v-on:click="sAddCounter">{{title}} scop component {{name}} {{scount}}</button></div>',
+      methods: {
+        sAddCount: function() {
+          this.scount++;
+        }
+      }
+    }
   },
   methods:{
     click1: function() {

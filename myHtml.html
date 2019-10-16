@@ -57,14 +57,18 @@
   <div>
     <a href="https://google.com.tw" @click.stop.prevent="doThat">gogogo</a>
   </div>
-  <div>
-    <counter title="title1 :" @clickcounter="clickcounter">
-      <!--this for slot--><h1>aloha</h1>
-    </counter>
+  <div global component>
+    <mycounter title="title1 :" @clickcounter="clickcounter">
+      <!--this for slot--><span>aloha</span>
+    </mycounter>
     
-    <counter title="title2 :">
-      <!--this for slot--><h1>bloba</ha>
-    </counter>
+    <mycounter title="title2 :">
+      <!--this for slot--><span>bloba</span>
+    </mycounter>
   </div>
+  <div>
+    <scopcomponent title="stitle"></scopcomponent>
+  </div>
+
 </div>
 <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
